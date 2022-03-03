@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
 
 	<meta charset="utf-8">
@@ -13,7 +13,64 @@
 	<title>Home</title>
 </head>
 <body>
-	<h1>Hello world with Bootstrap</h1>
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #005587;">
+		<a class="navbar-brand" th:href="@{/}">
+			<img src="images/icon-bootstrap.png" width="30" height="30" alt="">
+		</a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+	  	</button>
+		
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="#" style="color: white">Sobre Nós</a>
+			</div>
+			
+			<div class="nav-item dropdown">				
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+					Tópicos
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="#">Matemática</a>
+					<a class="dropdown-item" href="#">Física</a>
+					<a class="dropdown-item" href="#">Química</a>
+					<a class="dropdown-item" href="#">Biologia</a>
+					<a class="dropdown-item" href="#">Astronomia</a>
+					<a class="dropdown-item" href="#">Neurosciência</a>
+					<a class="dropdown-item" href="#">Ecologia</a>
+					<a class="dropdown-item" href="#">Ciência da Computação</a>
+					<a class="dropdown-item" href="#">Tecnologia</a>
+				</div>
+			</div>
+			
+			<form class="form-inline justify-content-end">
+				<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" arial-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+			</form>
+			
+		</div>
+	</nav>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
