@@ -22,55 +22,40 @@
 			<span class="navbar-toggler-icon"></span>
 	  	</button>
 		
-		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-			<div class="navbar-nav">
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		
+			<div class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<a class="nav-item nav-link active" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="#" style="color: white">Sobre Nós</a>
-			</div>
-			
-			<div class="nav-item dropdown">				
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
-					Tópicos
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="#">Matemática</a>
-					<a class="dropdown-item" href="#">Física</a>
-					<a class="dropdown-item" href="#">Química</a>
-					<a class="dropdown-item" href="#">Biologia</a>
-					<a class="dropdown-item" href="#">Astronomia</a>
-					<a class="dropdown-item" href="#">Neurosciência</a>
-					<a class="dropdown-item" href="#">Ecologia</a>
-					<a class="dropdown-item" href="#">Ciência da Computação</a>
-					<a class="dropdown-item" href="#">Tecnologia</a>
+			 	
+			 	<!-- dropdown div -->
+				<div class="nav-item dropdown">				
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+						Tópicos
+					</a>
+					
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Matemática</a>
+						<a class="dropdown-item" href="#">Física</a>
+						<a class="dropdown-item" href="#">Química</a>
+						<a class="dropdown-item" href="#">Biologia</a>
+						<a class="dropdown-item" href="#">Astronomia</a>
+						<a class="dropdown-item" href="#">Neurosciência</a>
+						<a class="dropdown-item" href="#">Ecologia</a>
+						<a class="dropdown-item" href="#">Ciência da Computação</a>
+						<a class="dropdown-item" href="#">Tecnologia</a>
+					</div>
 				</div>
 			</div>
 			
-			<form class="form-inline justify-content-end">
+			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" arial-label="Search">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
 			</form>
 			
 		</div>
 	</nav>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
