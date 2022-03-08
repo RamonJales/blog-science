@@ -1,6 +1,6 @@
 package br.com.blog.model.entities;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -11,19 +11,20 @@ import javax.persistence.Lob;
 
 @Entity
 public class Article {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer Id;
 	private String title;
 	private String author;
-	private LocalDate date;
+	private LocalDateTime date;
 	@Lob
 	private String text;
-	
-	public Article() {}
-	
-	public Article(Integer id, String title, String author, LocalDate date, String text) {
+
+	public Article() {
+	}
+
+	public Article(Integer id, String title, String author, LocalDateTime date, String text) {
 		Id = id;
 		this.title = title;
 		this.author = author;
@@ -55,11 +56,11 @@ public class Article {
 		this.author = author;
 	}
 
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
 
@@ -90,6 +91,7 @@ public class Article {
 
 	@Override
 	public String toString() {
-		return "Article [Id=" + Id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text + "]";
-	}	
+		return "Article [Id=" + Id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text
+				+ "]";
+	}
 }

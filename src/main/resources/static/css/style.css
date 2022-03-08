@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#main-section {
+	padding: 15px;
+}
+.rows-12 {
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+.cols-12 {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.card-title {
+	color: #005587;
+}
