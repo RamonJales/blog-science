@@ -91,7 +91,6 @@ public class Article {
 
 	@Override
 	public String toString() {
-		return "Article [Id=" + Id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text
-				+ "]";
+		return "Article [Id=" + Id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text + "]";
 	}
 }
