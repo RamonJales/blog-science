@@ -24,11 +24,10 @@
 				<div class="col-12 col-md-6 col-lg-4" th:each="num : ${#numbers.sequence((articleList.size() - 1), (articleList.size() - 3))}">
 					<div class="card">
 					    <div class="card-body">
-						      <a href="#"><h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4></a>
+						      <h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4>
 						      <h6 class="card-subtitle text-muted">Por <span th:text="${articleList.get(num).author}"></span> 
 						      - <span th:text="${articleList.get(num).date}"></span></h6>
 						      <p class="card-text"><span th:utext="${#strings.abbreviate(articleList.get(num).text, 200)}"></span></p>
-						      <a href="#" class="card-link float-end">card link</a>
 					    </div>
 					</div>
 				</div>
@@ -38,11 +37,10 @@
 					<div class="col-12 col-md-12 col-lg-12 cols-12">
 				    	<div class="card">
 				        		<div class="card-body">
-				            	<a href="#"><h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4></a>
+				            	<h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4>
 				            	<h6 class="card-subtitle text-muted">Por <span th:text="${articleList.get(num).author}"></span> 
 				            	- <span th:text="${articleList.get(num).date}"></span></h6>
 				            	<p class="card-text"><span th:utext="${#strings.abbreviate(articleList.get(num).text, 300)}"></span></p>
-				            	<a href="#" class="card-link float-end">card link</a>
 				        	</div>
 				        </div>
 				    </div>

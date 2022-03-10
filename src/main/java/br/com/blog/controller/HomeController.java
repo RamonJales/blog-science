@@ -22,7 +22,7 @@ public class HomeController {
 	
 	@GetMapping("/{id}")
 	public String getArticleDetails(Model model, @PathVariable("id") Integer id) {
-		model.addAttribute("article", articleRepository.findById(id));
-		return "/articles/articleDetails";
+		model.addAttribute("article", articleRepository.findById(id).get());
+		return "articles/articleDetails";
 	}
-}
+} 
