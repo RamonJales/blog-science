@@ -14,7 +14,7 @@ public class Article {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer Id;
+	private Integer id;
 	private String title;
 	private String author;
 	private LocalDateTime date;
@@ -25,7 +25,7 @@ public class Article {
 	}
 
 	public Article(Integer id, String title, String author, LocalDateTime date, String text) {
-		Id = id;
+		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.date = date;
@@ -33,11 +33,11 @@ public class Article {
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -74,7 +74,7 @@ public class Article {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -86,11 +86,11 @@ public class Article {
 		if (getClass() != obj.getClass())
 			return false;
 		Article other = (Article) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Article [Id=" + Id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text + "]";
+		return "Article [id=" + id + ", title=" + title + ", author=" + author + ", date=" + date + ", text=" + text + "]";
 	}
 }
