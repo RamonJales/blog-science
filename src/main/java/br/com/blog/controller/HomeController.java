@@ -20,9 +20,9 @@ public class HomeController {
 		return "/home/index";
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/article/{id}")
 	public String getArticleDetails(Model model, @PathVariable("id") Integer id) {
 		model.addAttribute("article", articleRepository.findById(id).get());
-		return "articles/articleDetails";
+		return "article/articleDetails";
 	}
 } 
