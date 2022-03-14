@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<title>Sobre nós</title>
+</head>
+<body>
+	
+	<div th:replace="fragments/fragments :: header"></div>
+	
+	<div><p class="my-2 ml-2"><a href="/article/new-article" class="btn btn-primary" role="button">Novo Artigo</a></div>
+	
+	<div th:replace="fragments/fragments :: script1"></div>
+	<div th:replace="fragments/fragments :: script2"></div>
+	<div th:replace="fragments/fragments :: script3"></div>
+
+</body>
+</html>

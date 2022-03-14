@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Article {
@@ -15,9 +16,12 @@ public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+	@NotBlank
 	private String title;
+	@NotBlank
 	private String author;
 	private LocalDateTime date;
+	@NotBlank
 	@Lob
 	private String text;
 

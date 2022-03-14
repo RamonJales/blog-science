@@ -25,4 +25,4 @@ public class HomeController {
 		model.addAttribute("article", articleRepository.findById(id).get());
 		return "article/articleDetails";
 	}
-} 
+}

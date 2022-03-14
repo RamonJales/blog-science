@@ -26,7 +26,7 @@
 					    <div class="card-body">
 						      <a th:href="@{/article/{id}(id=${articleList.get(num).id})}"><h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4></a>
 						      <h6 class="card-subtitle text-muted">Por <span th:text="${articleList.get(num).author}"></span> 
-						      - <span th:text="${articleList.get(num).date}"></span></h6>
+						      - <span th:text="${#temporals.format(articleList.get(num).date, 'dd/MM/yyyy - HH:mm')}"></span></h6>
 						      <p class="card-text"><span th:utext="${#strings.abbreviate(articleList.get(num).text, 200)}"></span></p>
 					    </div>
 					</div>
@@ -39,7 +39,7 @@
 				        		<div class="card-body">
 				            	<a th:href="@{/article/{id}(id=${articleList.get(num).id})}"><h4 class="card-title"><span th:text="${articleList.get(num).title}"></span></h4></a>
 				            	<h6 class="card-subtitle text-muted">Por <span th:text="${articleList.get(num).author}"></span> 
-				            	- <span th:text="${articleList.get(num).date}"></span></h6>
+				            	- <span th:text="${#temporals.format(articleList.get(num).date, 'dd/MM/yyyy - HH:mm')}"></span></h6>
 				            	<p class="card-text"><span th:utext="${#strings.abbreviate(articleList.get(num).text, 300)}"></span></p>
 				        	</div>
 				        </div>
