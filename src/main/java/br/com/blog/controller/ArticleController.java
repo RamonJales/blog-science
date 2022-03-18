@@ -19,7 +19,7 @@ public class ArticleController {
 	@Autowired
 	private ArticleDao articleRepository;
 	
-	@PostMapping("/article/new-article")
+	@PostMapping("/new-article")
 	public String saveArticle(@Valid Article article, BindingResult result, RedirectAttributes atributes) {
 		if (result.hasErrors()) {
 			atributes.addFlashAttribute("msg", "Verifique se os campos obrigatórios foram preenchidos!");

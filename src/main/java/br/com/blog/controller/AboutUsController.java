@@ -10,7 +10,7 @@ public class AboutUsController {
 		return "about-us/about-us";
 	}
 	
-	@GetMapping("/article/new-article")
+	@GetMapping("/new-article")
 	public String getArticleForm() {
 		return "article/article-form";
 	}
