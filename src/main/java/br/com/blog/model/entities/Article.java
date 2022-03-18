@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Article {
@@ -22,6 +23,7 @@ public class Article {
 	private String author;
 	private LocalDateTime date;
 	@NotBlank
+	@Size(min = 201)
 	@Lob
 	private String text;
 

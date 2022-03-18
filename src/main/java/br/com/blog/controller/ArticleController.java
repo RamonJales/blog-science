@@ -23,7 +23,7 @@ public class ArticleController {
 	public String saveArticle(@Valid Article article, BindingResult result, RedirectAttributes atributes) {
 		if (result.hasErrors()) {
 			atributes.addFlashAttribute("msg", "Verifique se os campos obrigatórios foram preenchidos!");
-			return "redirect:/article/new-article";
+			return "redirect:/new-article";
 		}
 		article.setDate(LocalDateTime.now(ZoneId.of("America/Sao_Paulo")));
 		articleRepository.save(article);

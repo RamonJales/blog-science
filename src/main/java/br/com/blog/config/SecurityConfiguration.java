@@ -19,8 +19,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
             "/article/{id}",
             "/images/**",
             "/css/**",
-            "/bootstrap/**",
-            "/messages/**"
+            "/bootstrap/**"
         };
 	
 	@Bean
@@ -31,6 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
+			.csrf().disable()
 			.authorizeRequests()
 			.antMatchers(AUTH_LIST).permitAll()
 			.anyRequest().authenticated()
