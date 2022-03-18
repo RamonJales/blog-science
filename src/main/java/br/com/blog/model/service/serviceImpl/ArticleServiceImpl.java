@@ -35,4 +35,9 @@ public class ArticleServiceImpl implements ArticleService{
 	public void save(Article article) {
 		articleRepository.save(article);
 	}
+
+	@Override
+	public List<Article> findAllByTitle(String title) {
+		return articleRepository.findAllByTitle(title);
+	}
 }

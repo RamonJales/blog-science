@@ -17,6 +17,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
             "/",
             "/about-us",
             "/article/{id}",
+            "/search",
             "/images/**",
             "/css/**",
             "/bootstrap/**"

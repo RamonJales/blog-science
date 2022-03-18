@@ -9,5 +9,6 @@ public interface ArticleService {
 	Optional<Article> findById(Integer id);
 	Article findByTitle(String title);
 	List<Article> findAll();
+	List<Article> findAllByTitle(String title);
 	void save(Article article);
 }
