@@ -11,13 +11,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import br.com.blog.model.dao.ArticleDao;
 import br.com.blog.model.entities.Article;
+import br.com.blog.model.repository.ArticleRepository;
 
 @Controller
 public class ArticleController {
 	@Autowired
-	private ArticleDao articleRepository;
+	private ArticleRepository articleRepository;
 	
 	@PostMapping("/new-article")
 	public String saveArticle(@Valid Article article, BindingResult result, RedirectAttributes atributes) {

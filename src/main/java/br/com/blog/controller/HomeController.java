@@ -6,13 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import br.com.blog.model.dao.ArticleDao;
+import br.com.blog.model.repository.ArticleRepository;
 
 @Controller
 public class HomeController {
 	
 	@Autowired
-	private ArticleDao articleRepository;
+	private ArticleRepository articleRepository;
 	
 	@GetMapping("/")
 	public String index(Model model) {
@@ -20,9 +20,9 @@ public class HomeController {
 		return "/home/index";
 	}
 	
-	@GetMapping("/article/{id}")
-	public String getArticleDetails(Model model, @PathVariable("id") Integer id) {
-		model.addAttribute("article", articleRepository.findById(id).get());
+	@GetMapping("/article/{title}")
+	public String getArticleDetails(Model model, @PathVariable("title") String title) {
+		model.addAttribute("article", articleRepository.findByTitle(title));
 		return "article/articleDetails";
 	}
 }
