@@ -16,7 +16,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     private static final String[] AUTH_LIST = {
             "/",
             "/about-us",
-            "/article/{id}"
+            "/article/{id}",
+            "/images/**",
+            "/css/**",
+            "/bootstrap/**",
+            "/messages/**"
         };
 	
 	@Bean
@@ -45,4 +49,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 			.password(passwordEncoder().encode("123"))
 			.authorities("ADMIN");
 	}
+	
+	/* this is the old way
+	 * @Override public void configure(WebSecurity web) throws Exception{
+	 * web.ignoring().antMatchers("/images/**", "/css/**", "/bootstrap/**"); }
+	 */
 }
