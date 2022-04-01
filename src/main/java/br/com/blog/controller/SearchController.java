@@ -6,17 +6,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import br.com.blog.model.repository.ArticleRepository;
+import br.com.blog.model.service.ArticleService;
 
 @Controller
 public class SearchController {
 	
 	@Autowired
-	private ArticleRepository articleRepository;
+	private ArticleService articleService;
 	
 	@PostMapping("/search")
 	public String search(Model model, @RequestParam("searchname") String searchName) {
-		model.addAttribute("articles", articleRepository.findAllByTitle(searchName));
+		model.addAttribute("articles", articleService.findAllByTitle(searchName));
 		return "/article/article-pagination";
 	}
 }

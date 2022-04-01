@@ -16,7 +16,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     private static final String[] AUTH_LIST = {
             "/",
             "/about-us",
-            "/article/{id}",
+            "/article/{title}",
             "/search",
             "/images/**",
             "/css/**",
