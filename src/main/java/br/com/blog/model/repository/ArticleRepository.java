@@ -12,6 +12,7 @@ import br.com.blog.model.entities.Article;
 public interface ArticleRepository extends JpaRepository<Article, Integer> {
 	Article findByTitle(String title);
 	
-	@Query("select p from Article p where p.title like %?1%")
+	//This command find the objects for name without case sensitive
+	@Query("select p from Article p where lower(p.title) like lower(concat('%', ?1, '%'))")
 	List<Article> findAllByTitle(String title);
 }
